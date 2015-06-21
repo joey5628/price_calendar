@@ -1,0 +1,188 @@
+
+/* 滑动组件，根据需求修改高度和宽度 */
+.carousel
+{
+    position: relative;
+    margin: 0 auto;
+    margin-top:20px;
+    line-height: 1;
+    width:980px;
+}
+
+.carousel-inner{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 325px;
+}
+
+    .carousel-inner .item
+    {
+        display: none;
+        position: absolute;
+        -webkit-transition: 0.6s ease-in-out left;
+        -moz-transition: 0.6s ease-in-out left;
+        -o-transition: 0.6s ease-in-out left;
+        transition: 0.6s ease-in-out left;
+    }
+
+        .carousel-inner .item img,
+        .carousel-inner .item a img
+        {
+            display: block;
+            line-height: 1;
+            -webkit-box-reflect:below 0 -webkit-gradient(linear,0 0,0 100%,from(transparent),color-stop(95%,transparent),to(rgba(255,255,255,.2)))
+        }
+
+    .carousel-inner .active,
+    .carousel-inner .next,
+    .carousel-inner .prev
+    {
+        display: block;
+    }
+
+    .carousel-inner .active
+    {
+        left: 0;
+    }
+
+    .carousel-inner .next,
+    .carousel-inner .prev
+    {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    .carousel-inner .next
+    {
+        left: 100%;
+    }
+
+    .carousel-inner .prev
+    {
+        left: -100%;
+    }
+
+        .carousel-inner .next.left,
+        .carousel-inner .prev.right
+        {
+            left: 0;
+        }
+
+    .carousel-inner .active.left
+    {
+        left: -100%;
+    }
+
+    .carousel-inner  .active.right
+    {
+        left: 100%;
+    }
+
+.carousel-control
+{
+    position: absolute;
+    bottom: 40px;
+    width: 50px;
+    height: 40px;
+    font-size: 40px;
+    font-weight: 100;
+    line-height: 35px;
+    color: #ffffff;
+    text-align: center;
+    background-color: rgba(0,0,0,.4);
+	*background-color: rgb(0,0,0);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+    border-style: solid;
+    border-color: #ccc;
+    outline:none;
+    display: inline-block;
+}
+
+    .carousel-control.left
+    {
+        right: 63px;
+        border-radius: 3px 0 0 3px;
+        border-width: 1px;
+        -webkit-border-radius: 3px 0 0 3px;
+        -moz-border-radius: 3px 0 0 3px;
+    }
+    .carousel-control.right
+    {
+        right: 12px;
+        -moz-border-radius: 0 3px 3px 0;
+	    -webkit-border-radius: 0 3px 3px 0;
+	    border-radius: 0 3px 3px 0;
+        border-width: 1px 1px 1px 0;
+    }
+
+    .carousel-control:hover
+    {
+        color: #ffffff;
+        text-decoration: none;
+        background-color: rgba(0,0,0,.2);
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40);
+    }
+
+.carousel-indicators
+{
+    position: absolute;
+    display: none;
+    left: 50%;
+    bottom: 8px;
+    z-index: 5;
+    list-style: none;
+    cursor: pointer;
+    outline:none;
+}
+
+    .carousel-indicators li
+    {
+        display: block;
+        float: left;
+        width: 10px;
+        height: 10px;
+        margin-left: 10px;
+        text-indent: -999px;
+        background-color: #ccc;
+        border-radius: 10px;
+    }
+
+    * html .carousel-indicators li {
+        background-color: #ccc;
+    }
+
+    .carousel-indicators .active
+    {
+        background-color: #41afea;
+    }
+
+.carousel-caption
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 15px;
+    background: #333333;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+    .carousel-caption h4,
+    .carousel-caption p
+    {
+        color: #ffffff;
+        line-height: 20px;
+    }
+
+    .carousel-caption h4
+    {
+        margin: 0 0 5px;
+    }
+
+    .carousel-caption p
+    {
+        margin-bottom: 0;
+    }
+

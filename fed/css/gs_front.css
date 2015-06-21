@@ -1,0 +1,46 @@
+.front{
+    margin:auto;        
+    max-width: 1180px;
+    min-width: 950px;
+	_width:950px;
+    background:#fff;
+    padding:20px;
+}
+
+.cui_nav{
+	_width:950px;
+}
+
+.front h1{padding: 10px; background: #f7f7f7; margin-bottom: 1em;}
+.front h3{line-height: 2em; margin-top: -1em;}
+.front h3 span{background: #fff;}
+.front .inputbox{ border:1px solid #ccc; padding:0 20px 10px 20px; margin-bottom: 30px;}
+	
+.front .inputbox ol{
+	padding-left: 2em;
+	margin: 10px 0;
+}
+	
+.front .inputbox ul{
+	padding-left: 2em;
+	margin: 10px 0;
+}	
+	
+.front .inputbox ol li{
+		list-style: decimal;
+	}
+	
+.front .inputbox ul li{
+		list-style: circle;
+	}	
+	
+.front .inputbox h4{
+		background: #efefef;
+		padding: 5px 10px;
+		font-size: 14px;
+		line-height: 1.5;
+		color: blue;
+	}
+	
+.front .inputbox ol.use li{line-height: 2em;border-bottom:  dotted 1px #ccc;}
+.front .inputbox .callcode{	font-size: 20px;color: blue;padding: 10px 0;}

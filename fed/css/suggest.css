@@ -1,0 +1,147 @@
+.sgt-address { width:345px; border:1px solid #cccccc; z-index:120; overflow:hidden; font-size:12px; margin-top:-1px; position:absolute; background:#fff; display:none}
+.sgt-address p { margin:0; padding:0; height:30px; line-height:30px; background:#4D6684; color:#fff; padding-left:6px; }
+.sgt-address .sgt-address-list{padding:5px 0;}
+.sgt-address .sgt-address-list a { display:block; cursor:pointer; line-height:24px; height:24px; padding:0 6px; color:#05a; text-decoration:none; }
+.sgt-address .sgt-address-list a strong { font-weight:normal;color:#333;}
+.sgt-address .sgt-address-list a span { float:right; }
+.sgt-address .sgt-address-list a:hover { background:#d4eaf6; }
+.sgt-address .sgt-address-list a.current { background:#d4eaf6; }
+
+.sgtgray{color:#aaa;}
+.sgtblack{color:#333;}
+
+/*
+#hKwordCon { width:420px; border:1px solid #ccc; border-top:none; overflow:hidden; font-size:12px; display:none; position:absolute; background:#fff; z-index:102;}
+#hKwordCon .sgt-address-list{ padding:0 0 5px 0;}
+#hKwordCon .sgt-address-list a strong { color:#333; font-weight:bold}
+
+#hKwordCon p { margin:0; padding:0;line-height:24px; color:#aaaaab;}
+#hKwordCon p span{padding-left:6px; color:#fff;}
+#hKwordCon .flytitle{ background:#4D6684; color:#fff; margin:5px;}
+#hKwordCon .sgt-address-list a { display:block; cursor:pointer; line-height:24px; height:24px; padding:0 6px; color:#333333; text-decoration:none;}
+#hKwordCon .sgt-address-list a span { float:right;}
+#hKwordCon .sgt-address-list a:hover {background:#d4eaf6;}
+#hKwordCon .sgt-address-list a.current { background:#d4eaf6;}
+#hKwordCon .sgt-address-list .sgt-kq{ position:relative; border-top:1px solid #ccc; padding-top:5px; background: none;}
+#hKwordCon .sgt-address-list .sgt-kq em{position:absolute; z-index:121; right:2px; top:7px; padding-right:18px; display:inline-block; color:#066ba1;}
+*/
+
+/* 文本框样式 */
+.gs-search-2{
+    float: right;
+    position: relative;
+    z-index: 10;
+}
+.gs-search-2 input {
+    border: 1px solid #CBD6DC;
+    border-right: 0 none;
+    font-size: 14px;
+    height: 28px;
+    line-height:28px;
+    overflow: hidden;
+    padding-left: 10px;
+    width: 270px;
+}
+.gs-search-2 .btn-search{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+	_top:2px;
+	_right:-1px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(/common/img/gs-common.png) no-repeat -52px -180px;
+}
+.gs-search-2 .btn-search:hover{
+    background-position:0 -212px;
+}
+.gs-search-2 .btn-search:active{
+    background-position:0 -243px;
+}
+
+.search-box{
+    position: absolute;
+    margin-top: -1px;
+    width: 312px;
+    border: 1px solid #CBD6DC;
+    background-color: #FFF;
+    z-index: 102;
+    display: none;
+}
+.search-box .divider{
+    border-top: 1px solid #cbd5db;
+    height: 0;
+}
+.search-box .color-r{
+    color: #cc0000;
+}
+.search-box a{
+    padding-left: 7px;
+    padding-right: 5px;
+    display: block;
+    line-height: 32px;
+    color: #333;
+    width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.search-box a:hover,
+.search-box a.current{
+    text-decoration: none;
+    background-color: #eeeeee;
+}
+.search-box .keyword{
+    font-weight: bold;
+}
+.search-box .text_flow{
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align:middle;
+    max-width: 180px;
+    line-height:normal;
+}
+.search-box a i{
+    width: 20px;
+    height: 20px;
+    margin: -3px 7px 0 0;
+    display: inline-block;
+    vertical-align: middle;
+    background: url(/common/img/gs-common.png) no-repeat 0 0;
+}
+.search-box a i.icon_des{
+    background-position: -78px -120px;
+}
+.search-box a i.icon_shop{
+    background-position: -78px 0;
+}
+.search-box a i.icon_attr{
+    background-position: -78px -30px;
+}
+.search-box a i.icon_rest{
+    background-position: -78px -60px;
+}
+.search-box a i.icon_amus{
+    background-position: -78px -90px;
+}
+.search-box a i.icon_attr_list{
+    background-position: -78px -150px;
+}
+.search-box a i.icon_airport{
+    background-position: -100px 0px;
+}
+.search-box a i.icon_train{
+    background-position: -100px -30px;
+}
+.search-box a i.icon_bus{
+    background-position: -100px -60px;
+}
+.search-box a i.icon_port{
+    background-position: -100px -90px;
+}
+.search-box a i.icon_subway{
+    background-position: -100px -120px;
+}

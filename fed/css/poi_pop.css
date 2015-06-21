@@ -1,0 +1,623 @@
+/* 尖角弹出 */
+.gs_poi_pop_outer{
+	width:462px;
+	padding:2px;
+	z-index:998;
+	background-color:rgba(204,204,204,0.3);
+	filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#A0d9d9d9', EndColorStr='#A0d9d9d9');
+}
+.gs_poi_pop{
+	width:460px;
+	background:#fff;
+	position:relative;
+	padding-bottom:5px;
+	border:1px solid #bcbcbc;
+	z-index:997;
+    *padding-bottom:15px;
+}
+
+.gs_poi_pop .btn_close{
+	position:absolute;
+	right:10px;
+	top:5px;
+	color:#999;
+	font-size:18px;}
+.gs_poi_pop .btn_close:hover{
+	text-decoration: none;
+	color:#777;
+}
+.gs_poi_pop .poipic{
+	margin:15px;
+	width:120px;
+	height:120px;
+	overflow:hidden;
+	display:inline-block;
+	background:url(/destination/img/ttd_nopic.png) no-repeat -110px -56px;
+	float:left;}
+.gs_poi_pop .poipic img{
+	width: 120px;
+	height: 120px;
+    overflow: hidden;
+}
+.gs_poi_pop s.bot_arrow{
+	display:inline-block;
+    left: 50%;
+	width:22px;
+	height:14px;
+    margin-left:-11px;
+    overflow: hidden;
+    position: absolute;
+	bottom:-12px;
+	background:url(/fed/img/poi_pop.png) no-repeat -111px -65px;
+}
+.gs_poi_pop s.left_arrow{ left:15px;margin-left:0;}
+.gs_poi_pop s.right_arrow{ left:auto; right:15px;}
+.gs_poi_pop dl{
+	float:left;
+	width:290px;
+	padding-top:15px;
+	}
+.gs_poi_pop dt{
+	font-size:16px;
+	line-height:24px;
+	padding-bottom:10px;}
+.gs_poi_pop dt a{
+	color:#333;}
+.gs_poi_pop dd{
+	color:#666;
+	padding-bottom:10px;}
+.gs_poi_pop dd a.poilink{
+    color:#00a7e1;
+	margin-right:9px;}
+
+.gs_poi_pop dd a.greylink{
+    background: #eee;
+    margin-right:9px;
+    background:#eee;
+    color:#333;
+    padding:0 3px;
+}
+.gs_poi_pop dd a.count{
+	margin-right:3px;
+	font-size:14px;
+	color:#333;}
+.gs_poi_pop dd .g_line{
+	color:#ddd;
+	padding:0 10px;}
+.gs_poi_pop dd a.productlink{
+	color:#666;
+	margin-right:10px;}
+.gs_poi_pop .price{
+	color:#ff5200;}
+.gs_poi_pop .price em{
+	font-size:20px;
+	padding:0 3px;}
+.gs_poi_pop dd .delspace{
+	color:#999;
+	padding-left:10px;}
+/* 按钮 */
+.gs_poi_pop .b_blue_s,.gs_poi_pop .b_orange_s,.gs_poi_pop dd .b_gray_s,.gs_poi_pop .b_orange_m{
+	background:#33b9e7;
+	height:19px;
+	display:inline-block;
+	color:#fff;
+	margin-right:10px;
+	line-height:21px;
+	border-bottom:2px solid #2ea6cf;
+	border-radius:3px;
+	padding:0 10px;}
+
+.gs_poi_pop .b_blue_s:hover{
+	text-decoration:none;
+	background:#00a7e1;
+	border-bottom-color:#0096ca;}
+.gs_poi_pop .b_blue_s:active{
+	text-decoration:none;
+	background:#00a7e1;
+	border-bottom:none;
+	line-height:17px;
+	border-top:2px solid #0096ca;}
+.gs_poi_pop .b_orange_s,.gs_poi_pop .b_orange_m{
+	float:right;
+	margin:0;
+	background:#ff7533; border-bottom-color:#e5692e;}
+.gs_poi_pop .b_orange_s:hover,.gs_poi_pop .b_orange_m:hover{	text-decoration:none;
+	background:#ff5200;
+	border-bottom-color:#e54a00;}
+.gs_poi_pop .b_orange_s:active,.gs_poi_pop .b_orange_m:active{
+		text-decoration:none;
+	background:#ff5200;
+	border-bottom:none;
+	line-height:17px;
+	border-top:2px solid #e54a00;}
+/* 按钮 中号*/
+.gs_poi_pop .b_orange_m{
+    background:#ff7533;
+    height:28px;
+    margin:0;
+    float: none;
+    line-height:30px;
+    font-size: 14px;
+    }
+.gs_poi_pop .b_orange_m:active{
+    line-height:26px;}
+/* 星星 */
+.gs_poi_pop .starlist_12{
+	overflow:hidden;
+	display:inline-block;
+	vertical-align:text-top;
+	background:url(/fed/img/poi_pop.png) no-repeat 0 -67px;
+	width:70px;
+	height:12px;
+	margin-right:8px;
+}
+.gs_poi_pop .starlist_12 span{
+	width:70px;
+	height:12px;
+	overflow:hidden;
+	display:inline-block;
+	vertical-align:top;
+	background:url(/fed/img/poi_pop.png) no-repeat -64px 0;
+}
+/* 餐馆等图标 */
+.gs_poi_pop dt i{
+	width:16px;
+	height:16px;
+	overflow:hidden;
+	vertical-align:text-top;
+	margin-right:7px;
+	display:inline-block;
+	background:url(/fed/img/poi_pop.png) no-repeat;}
+.gs_poi_pop dt i.sight{}
+.gs_poi_pop dt i.restaurant{ background-position:-16px 0}
+.gs_poi_pop dt i.hotel{ background-position:-32px 0}
+.gs_poi_pop dt i.amusement{ background-position:-48px 0}
+
+/* 酒店的钻石星星=s stars & diamonds */
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06,
+.hotel_stars01,
+.hotel_stars02,
+.hotel_stars03,
+.hotel_stars04,
+.hotel_stars05{display:inline-block;background:url(/destination/img/journeys_v1.png) no-repeat;overflow:hidden;vertical-align:text-top;}
+
+.hotel_stars01,
+.hotel_stars02,
+.hotel_stars03,
+.hotel_stars04,
+.hotel_stars05{height:16px;background-position:-248px -16px;}
+.hotel_stars01{width:12px;}
+.hotel_stars02{width:24px;}
+.hotel_stars03{width:36px;}
+.hotel_stars04{width:48px;}
+.hotel_stars05{width:60px;}
+
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06,
+.hotel_halfdiamond01,
+.hotel_halfdiamond02,
+.hotel_halfdiamond03,
+.hotel_halfdiamond04,
+.hotel_halfdiamond05,
+.hotel_halfdiamond06{height:12px; background-position:-249px 0;}
+.hotel_diamond01, .hotel_halfdiamond01{width:11px;}
+.hotel_diamond02, .hotel_halfdiamond02{width:23px;}
+.hotel_diamond03, .hotel_halfdiamond03{width:35px;}
+.hotel_diamond04, .hotel_halfdiamond04{width:47px;}
+.hotel_diamond05, .hotel_halfdiamond05{width:59px;}
+.hotel_diamond06, .hotel_halfdiamond06{width:71px;}
+.hotel_diamond01,
+.hotel_diamond02,
+.hotel_diamond03,
+.hotel_diamond04,
+.hotel_diamond05,
+.hotel_diamond06{background-position:-249px 3px;}
+.hotel_halfdiamond01{background-position:-321px 3px;}
+.hotel_halfdiamond02{background-position:-309px 3px;}
+.hotel_halfdiamond03{background-position:-297px 3px;}
+.hotel_halfdiamond04{background-position:-285px 3px;}
+.hotel_halfdiamond05{background-position:-273px 3px;}
+.hotel_halfdiamond06{background-position:-261px 3px;}
+/*=e stars & diamonds */
+
+/* user info */
+.gs_poi_pop .userpic{
+	border-radius:60px;
+	margin:15px 15px 10px 15px;
+	width:120px;
+	height:120px;
+	overflow:hidden;
+	display:inline-block;
+	float:left;}
+.gs_poi_pop .b_blue_s b{
+	font-size:14px;
+	padding-right:3px;
+	vertical-align:middle;}
+.gs_poi_pop dt .user_level{
+	width:38px;
+	height:14px;
+	line-height:14px;
+	background:#ff9913;
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+	border-radius:3px;
+	margin-left:10px;
+	display:inline-block;
+	vertical-align:middle;
+	}
+.gs_poi_pop dd .hz_1,
+.gs_poi_pop dd .hz_2,
+.gs_poi_pop dd .hz_3,
+.gs_poi_pop dd .hz_4,
+.gs_poi_pop dd .hz_5{
+	width:24px;
+	height:24px;
+	margin-right:7px;
+	display:inline-block;
+	overflow:hidden;
+	background:url(/fed/img/poi_pop.png) no-repeat;}
+.gs_poi_pop dd .hz_1{ background-position:0 -42px;}
+.gs_poi_pop dd .hz_2{ background-position: -50px -42px;}
+.gs_poi_pop dd .hz_3{ background-position:-25px -42px;}
+.gs_poi_pop dd .hz_4{ background-position:-100px -38px;}
+.gs_poi_pop dd .hz_5{ background-position: -75px -38px;}
+
+.gs_poi_pop dd .hz_1cur{ background-position:0 -17px;}
+.gs_poi_pop dd .hz_2cur{ background-position:-50px -17px;}
+.gs_poi_pop dd .hz_3cur{ background-position:-25px -17px;}
+.gs_poi_pop dd .hz_4cur{ background-position:-100px -13px;}
+.gs_poi_pop dd .hz_5cur{ background-position:-75px -13px;}
+.gs_poi_pop dd .b_gray_s{
+	background:#fff;
+	height:18px;
+	display:inline-block;
+	color:#666;
+	margin-right:10px;
+	line-height:20px;
+	border:1px solid #ccc;
+	border-bottom-width:2px;
+	border-radius:3px;
+    *margin-bottom:5px;
+    overflow: hidden;
+	padding:0 10px;}
+.gs_poi_pop .b_gray_s:hover{  text-decoration:none;
+    background:#f4f4f4;
+    border-bottom-color:#ccc;}
+.gs_poi_pop .b_gray_s:active{
+    text-decoration:none;
+    background:#f4f4f4;
+    line-height: 17px;
+    border-bottom-width: 1px;
+    border-top-width:2px;}
+.gs_poi_pop dd .b_gray_s i{
+	width:9px;
+	height:7px;
+	overflow:hidden;
+	display:inline-block;
+	vertical-align:middle;
+	background:url(/fed/img/poi_pop.png) no-repeat -78px -72px;
+	margin-right:5px;}
+/* 修正IE7-9BUG */
+.gs_poi_iefix{
+    position:absolute;
+    z-index:999;
+}
+
+.gs_poi_pop .comment{
+    background:#eee;
+    padding:5px 5px;
+    width: 320px;
+    margin-bottom:10px;
+}
+
+/* 500宽卡片 */
+.gs_pop_outer_500{
+    width: 502px;
+}
+.gs_pop_outer_500 .gs_poi_pop{
+    width: 500px;
+    padding-bottom: 0;
+    *padding-bottom:15px;
+}
+.gs_pop_outer_500 .gs_poi_pop dl{
+    width: 330px;
+}
+/* 城市卡片 */
+.gs_poi_pop dd .citycount{
+    text-decoration: none;
+    color: #333;
+    margin-right: 7px;
+    padding:0 5px;
+}
+.gs_poi_pop dd .citycount em{
+    color: #ff5200;
+    padding-left: 5px;
+}
+.gs_poi_pop dd.special_1{
+    font-size: 14px;
+}
+.gs_poi_pop dd.special_1 .cityname{
+    color: #333;
+    padding: 0 20px 0 10px;
+}
+.gs_poi_pop dd.special_1 .cityname{
+    color: #333;
+    padding: 0 20px 0 10px;
+}
+.gs_poi_pop dd.special_2{
+    width: 335px;
+    height: 51px;
+    padding:0;
+    margin-top:7px;
+    background: #eee;
+}
+.gs_poi_pop dd.special_2 li{
+    float: left;
+}
+.gs_poi_pop dd.special_2 li.priceline{
+    width: 100px;
+    line-height: 20px;
+    padding:5px 5px 0 10px;
+}
+.gs_poi_pop dd.special_2 li.hotelprice{
+    width: 90px;
+    line-height: 20px;
+    padding:15px 0 0 10px;
+}
+.gs_poi_pop dd.special_2 .b_orange_m{
+    margin-top: 10px;
+}
+.gs_poi_pop dd.special_2 .morelink{
+    height: 41px;
+    margin:5px 0 0 15px;
+    padding-left: 15px;
+    line-height: 40px;
+    background: url(/fed/img/poi_pop.png) no-repeat -138px 0;
+}
+.gs_poi_pop dd.special_2 .morelink a{
+    font-size: 14px;
+    color: #666;
+}
+.gs_poi_pop dd.special_3{
+    color: #666;
+}
+.gs_poi_pop dd.special_3 span.score{
+    padding-left:5px;
+}
+.gs_poi_pop dd.special_3 span.score b{
+    color: #333;
+}
+.gs_poi_pop dd.special_3 span.fenline{
+    padding:0 5px;
+    color: #ddd;
+}
+.gs_poi_pop .plane_info,.gs_poi_pop .plane_city,.gs_poi_pop .hotel_info,.gs_poi_pop .sight_info{
+    border-bottom: 1px dashed #ccc;
+    overflow: hidden;
+    width: 470px;
+    margin: 0 auto;
+}
+.gs_poi_pop .plane_info,.gs_poi_pop .hotel_info,.gs_poi_pop .sight_info{
+    *padding-bottom: 10px;
+}
+.gs_poi_pop .plane_info .poipic,.gs_poi_pop .hotel_info .poipic,.gs_poi_pop .sight_info .poipic{
+    margin-left: 0;
+}
+.gs_poi_pop .plane_datelist,.gs_poi_pop .hotel_datelist{
+    width: 500px;
+    *margin-bottom:-10px;    _margin-bottom:-15px;
+}
+.gs_poi_pop h4.hotel_title{
+    font-weight: normal;
+    color: #999;
+    padding-left: 15px;
+    width: 485px;
+    line-height: 16px;
+    height: 16px;
+    font-size: 12px;
+    margin-top: -7px;
+}
+.gs_poi_pop h4.hotel_title span{
+    float: left;
+    background: #fff;
+}
+.gs_poi_pop .plane_datelist .listouter,.gs_poi_pop .hotel_datelist .listouter{
+    float: left;
+    width: 162px;
+    height: 85px;
+    margin:5px 4px 5px 0;
+    background: url(/fed/img/poi_pop.png) no-repeat -138px 8px;
+
+}
+.gs_poi_pop .plane_listspecial{
+    padding-bottom: 5px;
+}
+.gs_poi_pop .plane_listspecial .listouter{
+    height: 58px;
+}
+.gs_poi_pop .plane_datelist ul,
+.gs_poi_pop .hotel_datelist ul{
+    width: 157px;
+    height: 77px;
+    padding-top: 8px;
+    margin-left: 5px;
+    overflow: hidden;
+}
+.gs_poi_pop .plane_listspecial ul{
+    height: 56px;
+}
+.gs_poi_pop .plane_datelist ul:hover,
+.gs_poi_pop .plane_datelist ul.current,
+.gs_poi_pop .hotel_datelist ul:hover,
+.gs_poi_pop .hotel_datelist ul.current{
+    background: #fef6dd;
+    cursor:pointer;
+}
+.gs_poi_pop .plane_datelist li,
+.gs_poi_pop .hotel_datelist li{
+    padding-left: 8px;
+    color: #666;
+    line-height: 24px;
+}
+.gs_poi_pop .hotel_datelist li .score{
+    padding-left: 10px;
+}
+.gs_poi_pop .hotel_datelist li .score b{
+    color: #333;
+}
+.gs_poi_pop .plane_datelist div.first,
+.gs_poi_pop .hotel_datelist div.first{
+    background: none;
+}
+.gs_poi_pop .plane_datelist .f_city,
+.gs_poi_pop .hotel_datelist .f_hotelname{
+    color: #333;
+    font-size: 14px;
+    display: block;
+    width: 140px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.gs_poi_pop .plane_datelist .discount{
+    height: 16px;
+    overflow: hidden;
+    display: inline-block;
+    background: #ffb027;
+    color: #fff;
+    text-align: center;;
+    line-height: 16px;
+    vertical-align: text-bottom;
+    margin-left: 10px;
+    padding:0 3px;
+}
+/* 城市对 */
+.gs_poi_pop .plane_city{
+    padding:15px 0 10px 0;
+}
+.gs_poi_pop .plane_city h3{
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: normal;
+    color: #666;
+}
+.gs_poi_pop .plane_city h3 i{
+    width: 18px;
+    height: 18px;
+    vertical-align: text-bottom;
+    overflow: hidden;
+    display: inline-block;
+    background:url(/journey2/img/journeys_v2.png) no-repeat -167px -18px;
+}
+.gs_poi_pop .plane_city h3 .cityname{
+    font-size: 18px;
+    color: #333;
+    padding: 0 10px;
+}
+.gs_poi_pop .plane_city p{color: #666; font-size:12px; line-height:18px;}
+.gs_poi_pop .plane_city p .f_lately{
+    font-size: 14px;
+    padding-right: 15px;
+}
+.gs_poi_pop .plane_city p .price{
+    margin-right:15px;
+}
+.gs_poi_pop .plane_city .b_orange_m{
+    margin-left: 15px;
+}
+.gs_pop_outer_500 .gs_visa_pop{
+    *padding-bottom:15px;
+}
+.gs_pop_outer_500 .gs_visa_pop .b_blue_s{
+    vertical-align: top;
+}
+/* 酒店无售卖 */
+.gs_poi_pop .hotel_nosale{
+    width: 470px;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+    overflow: hidden;
+}
+.gs_poi_pop .hotel_nosale dt{
+    padding-bottom: 0
+}
+.gs_poi_pop .hotel_nosale dl,.gs_poi_pop .hotel_nosale dd.special_2{
+    width: 470px;
+}
+.gs_poi_pop .hotel_nosale .hoteladdress{
+    width: 360px;
+    padding:16px 12px 0 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.gs_poi_pop .hotel_info dt,.gs_poi_pop .plane_info dt,.gs_poi_pop .sight_info dt{
+    width: 330px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.gs_poi_pop .noline{
+    border-bottom: 0 none;
+}
+.gs_poi_pop ul.train .price{margin-right: 15px;}
+.gs_poi_pop dd.special_2 ul.train li.priceline{
+    width:150px;
+    margin-top: 10px;
+}
+.gs_poi_pop .plane_datelist li i{
+    width: 18px;
+    height: 18px;
+    overflow: hidden;
+    float: left;
+    background:url(/journey2/img/journeys_v2.png) no-repeat -167px -18px;
+    margin-right: 3px;
+}
+.gs_poi_pop .plane .f_city{
+    display: block;
+    float: left;
+    width: 120px;
+    vertical-align: top;
+    line-height: 18px;
+    margin-bottom: 6px;
+}
+/* 景点有售卖 */
+.gs_poi_pop .sight_info dd{
+    padding-bottom: 8px;
+}
+.gs_poi_pop .sight_info dd .b_blue_s{
+    margin-top: 8px;
+}
+.gs_poi_pop dd.sightprice{
+    height: 35px;
+    width: 320px;
+    line-height: 32px;
+    background: #eee;
+    padding:0 5px 0 10px;
+    overflow: hidden;
+}
+.gs_poi_pop dd.sightprice .b_orange_s{
+    float: none;
+    margin-left: 20px;
+    margin-top: -5px;
+    vertical-align: middle;
+}
+

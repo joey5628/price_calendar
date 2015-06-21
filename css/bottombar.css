@@ -1,0 +1,37 @@
+.gs_bottombar{
+    position: fixed;
+    bottom: 0;
+    height: 30px;
+    border-top: 1px solid #ddd;
+    background: #f4f4f4;
+    width: 100%;
+    z-index: 11;
+    _display:none;
+}
+.gs_bottombar ul{
+    width: 980px;
+    margin:0 auto;
+    overflow: hidden;
+}
+.gs_bottombar li{
+    float: left;
+    width: 33%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+.gs_bottombar li a{
+    color: #666;
+}
+.gs_bottombar li span{
+    float: right;
+    width: 1px;
+    height: 18px;
+    margin-top: 6px;
+    *margin-top:-24px;
+    background: #ddd;
+}
+/* 重置ctrip底部间距 */
+#base_ft{
+    margin-bottom: 50px!important;
+}

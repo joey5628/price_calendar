@@ -1,0 +1,757 @@
+/* button size */
+input[type="button"], input[type="submit"], button {
+    border: 0;
+    cursor: pointer;
+    padding-bottom: 1px;
+}
+.btnwritetraveldiary, .btnsendphoto, .gsn-btnmore, .gsn-btnmore span, .gsn-btnmore i.arr-right, .gsn-btn-15, .gsn-btn-15 span {
+    background: url(/common/img/normal-button.png) no-repeat;
+    display: inline-block;
+    overflow: hidden;
+}
+.gsn-btn-1, .gsn-btn-2, .gsn-btn-3, .gsn-btn-4, .gsn-btn-5, .gsn-btn-6, .gsn-btn-7, .gsn-btn-8, .gsn-btn-9, .gsn-btn-10, .gsn-btn-11, .gsn-btn-12, .gsn-btn-13, .gsn-btn-14, .gsn-btn-15, .gsn-btn-16, .gsn-btn-17, .gsn-btn-18, .gsn-btn-19, .gsn-btn-20, .gsn-btn-21, .gsn-btn-22, .gsn-more-660, .gsn-btn-share, .btnwritetraveldiary i, .btnsendphoto i {
+    background: url(/common/img/normal-button.png) no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+.btnw95 {
+    width: 95px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* 写游记 */
+.btnwritetraveldiary {
+    background-position: 0 -82px;
+}
+.btnwritetraveldiary:hover {
+    text-decoration: none;
+    background-position: 0 -123px;
+}
+.btnwritetraveldiary i, .btnsendphoto i {
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    overflow: hidden;
+    float: left;
+    margin: 10px -7px 0 11px;
+    background-position: -655px -303px;
+}
+
+/* 发照片 */
+.btnsendphoto {
+    background-position: -105px -82px;
+}
+.btnsendphoto i {
+    background-position: -656px -330px;
+}
+.btnsendphoto:hover {
+    text-decoration: none;
+    background-position: -105px -123px;
+}
+
+/* 右侧带箭头更多 */
+.gsn-btnmore {
+    height: 27px;
+    padding-left: 8px;
+    font-size: 12px;
+    color: #06c;
+    position: relative;
+    text-decoration: none;
+    background: none;
+    margin-bottom: 10px;
+}
+.gsn-btnmore span {
+    vertical-align: top;
+    cursor: pointer;
+    height: 27px;
+    float: right;
+    background: none;
+}
+.gsn-btnmore i.arr-right {
+    background: url(/destination/img/des_icon.png) no-repeat;
+    display: inline-block;
+    height: 9px;
+    margin-left: 6px;
+    overflow: hidden;
+    vertical-align: baseline;
+    *vertical-align: middle;
+    width: 5px;
+}
+.gsn-btnmore:hover {
+    text-decoration: none;
+}
+.gsn-btnmore:hover span {
+    background-position: right -144px
+}
+
+/* 橙色按钮 */
+.gsn-btn-1, .gsn-btn-4, .gsn-btn-7 {
+    width: 127px;
+    height: 36px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 36px;
+    font-weight: bold;
+}
+.gsn-btn-1:hover {
+    text-decoration: none;
+    background-position: 0 -41px;
+}
+.gsn-btn-2, .gsn-btn-5, .gsn-btn-6, .gsn-btn-8 {
+    width: 54px;
+    height: 30px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 30px;
+    background-position: -138px 0;
+    font-weight: bold;
+}
+.gsn-btn-2:hover {
+    text-decoration: none;
+    background-position: -138px -41px;
+}
+.gsn-btn-3, .gsn-btn-9, .gsn-btn-22 {
+    width: 60px;
+    height: 21px;
+    color: #fff;
+    line-height: 21px;
+    background-position: -202px 0;
+}
+.gsn-btn-3:hover {
+    text-decoration: none;
+    background-position: -203px -42px;
+}
+.gsn-btn-4 {
+    background-position: 0 -169px;
+}
+.gsn-btn-4:hover {
+    text-decoration: none;
+    background-position: -134px -169px;
+}
+.gsn-btn-5 {
+    background-position: -207px -83px;
+}
+.gsn-btn-5:hover {
+    text-decoration: none;
+    background-position: -208px -123px;
+}
+.gsn-btn-6 {
+    color: #333;
+    font-weight: normal;
+    background-position: -138px -213px;
+}
+.gsn-btn-6:hover {
+    text-decoration: none;
+    background-position: -139px -254px;
+}
+.gsn-btn-7 {
+    color: #aaa;
+    cursor: default;
+    background-position: -273px -166px;
+}
+.gsn-btn-8 {
+    color: #aaa;
+    cursor: default;
+    background-position: -273px -211px;
+}
+.gsn-btn-9 {
+    color: #aaa;
+    cursor: default;
+    background-position: -273px -253px;
+}
+.gsn-btn-22 {
+    color: #333;
+    font-weight: normal;
+    background-position: -202px -213px
+}
+.gsn-btn-22:hover {
+    text-decoration: none;
+    background-position: -203px -254px;
+}
+.gsn-btn-10, .gsn-btn-11, .gsn-btn-12, .gsn-btn-13, .gsn-btn-14 {
+    color: #333;
+    padding-left: 37px;
+    width: 43px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    text-align: left;
+    background-position: -273px -84px;
+}
+.gsn-btn-10:hover {
+    text-decoration: none;
+    color: #fff;
+    background-position: -273px -125px
+}
+.gsn-btn-11 {
+    background-position: -364px -84px
+}
+.gsn-btn-11:hover {
+    text-decoration: none;
+    color: #fff;
+    background-position: -364px -125px;
+}
+.gsn-btn-12 {
+    color: #fff;
+    background-position: -273px 0;
+    cursor: default;
+}
+.gsn-btn-13, .gsn-btn-14 {
+    color: #333;
+    width: 43px;
+    height: 30px;
+    padding-left: 34px;
+    background-position: -363px -42px;
+}
+.gsn-btncur-13 {
+    cursor: default;
+    color: #aaa;
+    background-position: -598px -105px;
+}
+.gsn-btn-14 {
+    background-position: -363px 0;
+}
+.gsn-btncur-14 {
+    cursor: default;
+    color: #aaa;
+    width: 49px;
+    background-position: -451px -140px;
+}
+
+/* 翻页更多 */
+.gsn-btn-15 {
+    height: 27px;
+    padding-left: 8px;
+    font-size: 12px;
+    color: #518fce;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    background-position: -542px -183px;
+}
+.gsn-btn-15 span {
+    vertical-align: top;
+    line-height: 27px;
+    width: 84px;
+    cursor: pointer;
+    height: 27px;
+    padding-right: 8px;
+    background-position: right -183px;
+}
+.gsn-btn-15:hover {
+    text-decoration: none;
+    background-position: -542px -144px;
+    text-decoration: none;
+    color: #fff;
+}
+.gsn-btn-15:hover span {
+    background-position: right -144px
+}
+
+/* 下拉按钮 */
+.gsn-btn-16 {
+    width: 72px;
+    height: 22px;
+    line-height: 22px;
+    color: #666;
+    cursor: pointer;
+    padding-right: 16px;
+    background-position: -410px -277px;
+}
+.gsn-btn-16:hover, .gsn-btncur-16 {
+    color: #fff;
+    background-position: -410px -250px;
+}
+.gsn-btn-17, .gsn-btn-18, .gsn-btn-19 {
+    width: 104px;
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+    cursor: pointer;
+    padding-right: 23px;
+    background-position: -410px -174px;
+}
+.gsn-btn-17:hover, .gsn-btncur-17 {
+    background-position: -548px -223px;
+}
+.gsn-btn-18 {
+    width: 38px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    padding-right: 16px;
+    background-position: -410px -215px;
+}
+.gsn-btn-18:hover, .gsn-btncur-18 {
+    background-position: -474px -215px;
+}
+.gsn-btn-19 {
+    width: 44px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 12px;
+    padding-right: 16px;
+    background-position: -545px -269px;
+}
+.gsn-btn-19:hover, .gsn-btncur-19 {
+    background-position: -615px -269px;
+}
+.gsn-btn-20 {
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    background-position: 0 -292px;
+}
+.gsn-btn-20:hover {
+    text-decoration: none;
+    background-position: -105px -318px;
+}
+.gsn-btn-21 {
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #333;
+    background-position: -512px -295px;
+}
+.gsn-btn-21:hover {
+    text-decoration: none;
+    background-position: -512px -327px;
+}
+
+/* 分享 */
+.shareulbg_2, .shareulbg {
+    display: none;
+    height: 129px;
+    padding-top: 6px;
+    position: absolute;
+    width: 129px;
+    z-index: 10;
+    background: url(/common/img/normal-button.png) no-repeat scroll transparent;
+    background-position: -451px 0;
+    cursor: pointer;
+    /* display: inline-block;
+    */
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none;
+}
+.shareulbg li {
+    float: left;
+    width: 64px;
+}
+.shareulbg li a {
+}
+.shareulbg li a:hover {
+    color: #518FCE;
+    text-decoration: none;
+}
+.sharebox {
+    position: relative;
+    z-index: 1;
+}
+.sharebox .shareulbg_2, .sharebox .shareulbg {
+    position: absolute;
+    background-position: -451px 0;
+    width: 129px;
+    height: 129px;
+    display: none;
+    left: 0;
+    padding-top: 6px;
+    z-index: 10;
+    top: 30px;
+}
+.shareulbg_2 a {
+    color: #333333;
+    display: inline-block;
+    font-size: 12px;
+    height: 64px;
+    float: left;
+    width: 64px;
+    text-align: center;
+    text-decoration: none;
+}
+.shareulbg_2 a span {
+    margin-top: 40px;
+    display: block;
+}
+.shareulbg_2 a:hover span {
+    color: #518fce;
+}
+.gsn-btn-share {
+    width: 77px;
+    height: 30px;
+    text-indent: -9999px;
+    *display: block;
+    background-position: -170px -286px;
+}
+.gsn-btn-share:hover {
+    text-decoration: none;
+    background-position: -257px -280px;
+}
+
+/* 重置大按钮字号字体 */
+.gsn-btn-1, .gsn-btn-4, .gsn-btn-7, .gsn-btn-17 {
+    font-size: 18px;
+    font-family: 'MicroSoft YaHei';
+    font-weight: normal
+}
+
+/* tips */
+.gsn-tips-opacity {
+    height: 32px;
+    width: 200px;
+    position: relative;
+}
+.gsn-tips-opacity .spanbg {
+    border-radius: 5px;
+    height: 32px;
+    background: #000;
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%
+}
+.gsn-tips-opacity .text {
+    height: 32px;
+    line-height: 32px;
+    display: inline-block;
+    color: #fff;
+    padding: 0 10px;
+    position: absolute;
+}
+.gsn-tips-opacity .arrow {
+    display: block;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    top: 32px;
+    margin-left: -5px;
+    left: 50%;
+    opacity: 0.8;
+    border-top: 5px solid #000;
+    border-bottom: 0; /* 注意颜色的变化 */
+    border-right: 5px solid #fff;
+    border-left: 5px solid #fff;
+}
+.gsn-tips-opacity .leftarrow {
+    display: block;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    font-size: 0;
+    line-height: 0;
+    top: 50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    left: 0;
+    opacity: 0.8;
+    border-top: 5px solid #fff;
+    border-bottom: 5px solid #fff; /* 注意颜色的变化 */
+    border-right: 5px solid #000;
+    border-left: 0;
+}
+
+/* 原底部长条更多 */
+.btnMore {
+    background: none repeat scroll 0 0 #fefefe;
+    border: 1px solid #CFD5D9;
+    border-radius: 3px 3px 3px 3px;
+    color: #458bb9;
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    font: 12px/22px Arial, "宋体", sans-serif;
+    margin-left: 10px;
+    padding: 2px 12px;
+    text-decoration: none;
+}
+.btnw270 {
+    width: 270px;
+    height: 30px;
+    padding: 12px 105px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* 喜欢 */
+.gs-like-box {
+    height: 60px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: 12px;
+    overflow: hidden;
+    *display: inline;
+    *zoom: 0;
+    margin: 10px 20px 0 0;
+    float: right;
+}
+.gs-like-box i {
+    display: block;
+    height: 40px;
+    width: 40px;
+    background: url(/common/img/gs-common.png) no-repeat -38px -234px;
+    cursor: pointer;
+}
+.gs-like-box span {
+    color: #FE874B;
+    text-align: center;
+}
+.gs-like-box a {
+    position: relative;
+    text-decoration: none;
+}
+.gs-like-box a.islike i {
+    background: url(/fed/img/ico-heart.png) no-repeat top center;
+}
+.gs_addone_1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #FE874B;
+    opacity: 1;
+    display: none;
+}
+
+/* .gsn-more-660 */
+.gsn-more-660 {
+    width: 660px;
+    height: 40px;
+    background-position: 0 -358px;
+    display: block;
+}
+.gsn-more-660:hover {
+    text-decoration: none;
+    background-position: 0 -399px;
+}
+.gsn-more-660-ajax {
+    display: block;
+    background: url(/common/img/loading30.gif) no-repeat scroll center 50% #EFF6FD;
+    border-radius: 5px;
+    width: 660px;
+    height: 40px;
+    overflow: hidden;
+}
+.gs_loading {
+    width: 100%;
+    min-height: 200px;
+    _height: 200px;
+    background: #fff url(/common/img/loading30.gif) no-repeat center 50%;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+.gs_loading_gay {
+    width: 100%;
+    min-height: 38px;
+    _height: 38px;
+    background: #fff url(/common/img/loading70.gif) no-repeat center 50%;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+}
+.gs_loading p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 20px 0 0 -45px;
+}
+.gs_list_load {
+    width: 100%;
+    text-align: center;
+    color: #aaa;
+    margin: 50px auto;
+}
+.gs_list_load i.listload, .gs_list_load i.listface {
+    background: #fff url(/common/img/icon.png) no-repeat -252px -415px;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+    margin-right: 15px;
+    display: inline-block;
+    overflow: hidden;
+}
+.gs_list_load i.listface {
+    background: url(/common/img/icon.png) no-repeat -252px -459px;
+}
+
+/* gs upload */
+.gs_uload_container {
+}
+.gs_uload_container .item {
+    background: url(/common/img/loading.gif) 50% 50% no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    float: left;
+    margin: 0px 5px 5px 0;
+}
+.gs_uload_container .item img {
+    width: 84px;
+    height: 84px;
+}
+.gs_uload_container .item a.btn_cancel {
+    position: absolute;
+    bottom: 0px;
+    line-height: 1.5em;
+    display: block;
+    width: 100%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+/* hover underline */
+.gsn-btn-7:hover, .gsn-btn-8:hover, .gsn-btn-13:hover, .gsn-btn-14:hover, .gsn-btn-9:hover {
+    text-decoration: none;
+}
+
+/* btn-go */
+.gsn-btn-23, .gsn-btn-24, .gsn-btn-25 {
+    background: url(/common/img/btn-go.png) no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    color: #333;
+    padding-left: 28px;
+    height: 27px;
+    line-height: 27px;
+    position: relative;
+}
+.gsn-btn-23 span, .gsn-btn-24 span, .gsn-btn-25 span {
+    background: url(/common/img/btn-go.png) no-repeat;
+    line-height: 27px;
+    padding-right: 12px;
+    display: inline-block;
+    overflow: hidden;
+}
+.gsn-btn-23 {
+    background-position: 0 0
+}
+.gsn-btn-23 span {
+    background-position: right 0;
+}
+.gsn-btn-23:hover {
+    background-position: 0 -71px
+}
+.gsn-btn-23:hover span {
+    background-position: right -71px
+}
+.gsn-btn-24 {
+    background-position: 0 -37px
+}
+.gsn-btn-24 span {
+    background-position: right -37px;
+}
+.gsn-btn-24:hover {
+    background-position: 0 -108px
+}
+.gsn-btn-24:hover span {
+    background-position: right -108px
+}
+.gsn-btn-25 {
+    background-position: 0 -149px;
+    cursor: default
+}
+.gsn-btn-25 span {
+    background-position: right -149px;
+}
+.gsn-btn-23 s, .gsn-btn-24 s, .gsn-btn-25 s {
+    padding-left: 5px;
+    text-decoration: none;
+    font-size: 10px;
+    color: #aaa;
+    font-family: Arial;
+}
+.btn_ajax {
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    margin: 0 auto;
+    display: inline;
+}
+
+/* 取消关注样式 */
+.clue_uplayer {
+    position: absolute;
+    z-index: 99;
+    width: 93px;
+    height: 87px;
+}
+.close_layerClue {
+    position: absolute;
+    z-index: 100;
+    width: 93px;
+    height: 87px;
+    background: url(/fed/img/fri_closelayer.png) no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop src='/fed/img/fri_closelayer.png');
+    _background-image: none;
+}
+.clue_uplayer ul {
+    position: relative;
+    z-index: 150;
+    padding: 28px 0 0 0;
+    color: #666;
+}
+.clue_uplayer ul li {
+    padding-bottom: 3px;
+    text-align: center;
+}
+.clue_uplayer ul li input {
+    display: inline-block;
+    width: 34px;
+    height: 18px;
+    line-height: 18px;
+    background: url(/fed/img/fri_blockbg.png) left -144px no-repeat;
+    border: none;
+    cursor: pointer;
+    margin: 0 3px 0 2px;
+}
+
+/* 分享微信二维码 */
+#qcode_share {
+    width: 590px;
+    height: 321px;
+    background: url(/fed/img/weixin.gif) 0 0 no-repeat;
+    padding: 0;
+    border: 0;
+    box-shadow: 0 0 5px #eee;
+    position: absolute;
+    display: none;
+    z-index: 1000000;
+}
+
+#qcode_share .close {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    display: inline-block;
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    background: url(/common/img/icon.png) no-repeat -120px -347px
+}
+
+#qcode_share .close:hover {
+    background-position: -158px -347px
+}
+
+#qcode_share canvas, #qcode_share table {
+    margin: 88px 0 0 77px;
+}

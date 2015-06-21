@@ -1,0 +1,338 @@
+<?php include('../../config.php');  ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PriceCalendar</title>
+    <link charset='utf-8' rel='stylesheet' href='css/global.css' />
+    <link charset='utf-8' rel='stylesheet' href='css/bottombar.css' />
+    <link charset='utf-8' rel='stylesheet' href='css/button.css' />
+    <link charset='utf-8' rel='stylesheet' href='css/gs_price_calendar.css' />
+
+    <style>
+        .demo{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="demo">
+            <!-- <div class="price_calendar">
+                <div class="month_control">
+                    <a href="javascript:;" class="prev disable"></a>
+                    <a href="javascript:;" class="next"></a>
+                </div>
+                <table>
+                    <caption>2015年6月</caption>
+                    <thead>
+                        <tr>
+                            <th class="weekend">SUN 日</th>
+                            <th>MON 一</th>
+                            <th>TUE 二</th>
+                            <th>WED 三</th>
+                            <th>THU 四</th>
+                            <th>FRI 五</th>
+                            <th class="weekend">SAT 六</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="sell_out">
+                                <span class="date">2</span>
+                                <span class="text">无房</span>
+                            </td>
+                            <td class="item">
+                                <span class="date">18</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item lowest">
+                                <span class="date">19</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                            <td class="item weekend">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="sell_out">
+                                <span class="date">2</span>
+                                <span class="text">无房</span>
+                            </td>
+                            <td class="item">
+                                <span class="date">18</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item lowest">
+                                <span class="date">19</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                            <td class="item weekend">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="past weekend">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="sell_out">
+                                <span class="date">2</span>
+                                <span class="text">无房</span>
+                            </td>
+                            <td class="item">
+                                <span class="date">18</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item lowest">
+                                <span class="date">19</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                            <td class="item weekend">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="past weekend">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="sell_out">
+                                <span class="date">2</span>
+                                <span class="text">无房</span>
+                            </td>
+                            <td class="item">
+                                <span class="date">18</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item lowest">
+                                <span class="date">19</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                            <td class="item weekend">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="past">
+                                <span class="date">1</span>
+                                <span class="text">--</span>
+                            </td>
+                            <td class="sell_out">
+                                <span class="date">2</span>
+                                <span class="text">无房</span>
+                            </td>
+                            <td class="item">
+                                <span class="date">18</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item lowest">
+                                <span class="date">19</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                            <td class="item">
+                                <span class="date">20</span>
+                                <span class="price">
+                                    实时计价
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="calendar_text">因房价变动频繁，请以实时查询报价为准。</p>
+            </div> -->
+
+            <!-- <div class="price_calendar">
+                <h4 class="cf">
+                    <span class="weekend">SUN日</span>
+                    <span>MON一</span>
+                    <span>TUE二</span>
+                    <span>WED三</span>
+                    <span>THU四</span>
+                    <span>FRI五</span>
+                    <span class="weekend">SAT六</span>
+                </h4>
+                <div class="month_control">
+                    <a href="javascript:;" class="control prev"></a>
+                    <a href="javascript:;" class="control next"></a>
+                </div>
+                <div class="price_calendar_box">
+                    <table>
+                        <tr>
+                            <td class="none"></td>
+                            <td class="none">
+                                <span class="date">10</span>
+                                <span>--</span>
+                            </td>
+                            <td>
+                                <span class="date">1</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td>
+                                <span class="date">1</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>890
+                                </span>
+                            </td>
+                            <td class="lowest">
+                                <span class="date">今</span>
+                                <span class="price">
+                                    <dfn>￥</dfn>89
+                                </span>
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th>
+                                <span>2015年</span>
+                                06月
+                            </th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th></th>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+                <p class="calendar_text">因票价变动频繁，请以实时查询报价为准。</p>
+            </div> -->
+        </div>
+    </div>
+
+<script charset='utf-8' type='text/javascript' src='js/jquery-1.7.min.js'></script>
+<script charset='utf-8' type='text/javascript' src='js/jquery.tmpl.min.js'></script>
+<script charset='utf-8' type='text/javascript' src='js/gs_price_calendar.js'></script>
+
+</body>
+</html>

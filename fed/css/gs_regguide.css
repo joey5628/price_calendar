@@ -1,0 +1,70 @@
+.reg_guide{
+	width:100%;
+	height:83px;
+	min-width:980px;
+	background:url(/fed/img/reg_guide_bg.png) repeat-x;
+	_background:url(/fed/img/reg_guide_bg.gif) repeat-x;
+	position:fixed;
+	bottom:0;
+	_position:relative;
+	display:none;
+}
+.reg_guide .reg_main{
+	width:980px;
+	margin:-20px auto 0 auto;
+	height:103px;
+	_position:relative;
+	background:url(/fed/img/reg_guide.png) no-repeat;
+	_background:url(/fed/img/reg_guide.gif) no-repeat;}
+.reg_guide .reg_main .l_link{
+	float:left;
+	padding:70px 0 0 87px;}
+.reg_guide .reg_main .l_link a{
+	color:#0084d8;
+	font-size:14px;
+	font-family:MicroSoft Yahei,Hiragino Sans GB;
+	padding-left:10px;
+	margin-right:20px;
+	background:url(/fed/img/reg_guide.png) no-repeat -564px -106px;}
+.reg_guide .reg_main .l_link a span{
+	color:#ff7f00;}
+.reg_guide .reg_main .r_button{
+	float:right;
+	padding:45px 40px 0 0;}
+.reg_guide .reg_main .r_button a{
+	width:107px;
+	height:36px;
+	overflow:hidden;
+	display:inline-block;
+	line-height:36px;
+	color:#fff;
+	margin-left:15px;
+	text-align:center;
+	font-family:MicroSoft Yahei,Hiragino Sans GB;
+	font-size:20px;
+	background:url(/fed/img/reg_guide.png) no-repeat;
+}
+.reg_guide .reg_main .r_button a.regbutton{
+	background-position:-76px -103px;}
+.reg_guide .reg_main .r_button a.regbutton:hover{
+	background-position:-188px -103px;
+	text-decoration:none;}
+.reg_guide .reg_main .r_button a.loginbutton{
+	background-position:-300px -103px;}
+.reg_guide .reg_main .r_button a.loginbutton:hover{
+	background-position:-412px -103px;
+	text-decoration:none;}
+a.reg_close{
+	width:24px;
+	height:23px;
+	color:#fff;
+	display:inline-block;
+	overflow:hidden;
+	cursor:pointer;
+	position:absolute;
+	right:10px;
+	top:30px;
+	background:url(/fed/img/reg_guide.png) no-repeat 0 -103px;}
+a.reg_close:hover{
+	background-position:-30px -103px;
+	}

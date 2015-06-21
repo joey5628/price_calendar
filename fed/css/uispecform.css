@@ -1,0 +1,279 @@
+/* UI spec form */
+#sgt-address { width:308px; border:1px solid #aaaaac; z-index:120; overflow:hidden; -moz-box-shadow:3px 4px 5px #ccc; -webkit-box-shadow:3px 4px 5px #ccc; box-shadow:3px 4px 5px #ccc; font-size:12px; margin-top:-1px; display:none; position:absolute; background:#fff;}
+#sgt-address p { margin:0; padding:0; height:30px; line-height:30px; background:#4D6684; color:#fff; padding-left:6px;}
+#sgt-address #sgt-address-list a { display:block; cursor:pointer; line-height:24px; height:24px; padding:0 6px; color:#004B91; text-decoration:none;}
+#sgt-address #sgt-address-list a strong { font-weight:normal;}
+#sgt-address #sgt-address-list a span { float:right; }
+#sgt-address #sgt-address-list a:hover {background:#d3d3d3;}
+#sgt-address #sgt-address-list a.current { background:#d3d3d3;}
+
+
+.gsn-search{
+	height:29px;
+	width:240px;
+	}
+.gsn-search .citysuggestbtn{
+	height:27px;
+	color:#ddd;
+	width:210px;
+	line-height:26px;
+	border:1px solid #cbd6dc;
+	text-indent:8px;
+	border-right:none 0;
+	float:left;}
+.gsn-search .citysuggestbtn:focus{
+	color:#333;
+	border-right:none 0;}
+.gsn-search a{
+	float:right;}
+.gsn-search i{
+	width:29px;
+	height:29px;
+	overflow:hidden;
+	display:inline-block;
+	background:url(/common/img/icon.png) no-repeat}
+.gsn-search i.ico-magnifier{
+	background-position:-42px -347px;}
+.gsn-search i.ico-loading{
+	background-position:-81px -347px;}
+.gsn-terminisuggestbtn{
+	height:27px;
+	color:#ddd;
+	width:210px;
+	line-height:26px;
+	border:1px solid #cbd6dc;
+	text-indent:8px;
+	float:left;}
+.gsn-terminisuggestbtn:focus{
+	color:#333;}
+
+.gsn-notice{
+	padding:25px 30px 25px 15px;
+	line-height:20px;
+	overflow:hidden;
+	position:relative;
+	border-radius:6px;
+	margin-bottom:5px;
+	box-shadow:0 3px 3px 0px #f5f3f7;
+	background: #6fbb22;
+	background:rgba(111,187,34,0.9);
+	color:#fff;
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+}
+.gsn-notice .close{
+	position:absolute;
+	right:6px;
+	top:6px;
+	color:#fff;
+	width:20px;
+	height:20px;
+	overflow:hidden;
+	font-size:16px;
+	font-family: "Microsoft YaHei";
+	_font-size:14px;	
+	_font-weight:bold;
+	text-decoration: none;
+}
+
+.gsn-notice .close:hover{color:#fff;}
+.gsn-notice span em{font-size: 20px;}
+
+	/* by cwp GSCHANGE-394 风格统一掉.
+.gsn-ynotice{
+	background:#fcf8e3;
+	color:#c09853;
+	border:1px solid #fbeed5}
+.gsn-bnotice{
+	background:#d9edf7;
+	color:#3a87ad;
+	border:1px solid #bce8f1}
+*/
+
+/** mover global.css
+.gsn-layer{
+	padding:25px 30px;
+	position:relative;
+	border:1px solid #d0d0d0;
+	box-shadow:0 0 3px 0px #ccc;
+	background: #fff;
+	}
+.gsn-layer .close{
+	width:32px;
+	height:32px;
+	overflow:hidden;
+	display:inline-block;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	background:url(/common/img/icon.png) no-repeat -120px -347px;}
+.gsn-layer .close:hover{
+	background-position:-158px -347px;}
+ */
+
+.gsn-form{}
+.gsn-form .gsn-label{
+	font-size:14px;
+	line-height:34px;}
+.gsn-inputbox{
+	clear:both;}
+.gsn-form .gsn-inputext{
+	width:362px;
+	height:34px;
+	border:1px solid #bbb;
+	padding-left:8px;
+	line-height:34px;
+	color:#aaa;
+	font-size:14px;}
+.gsn-form .gsn-inputext:focus{
+	color:#333;}
+.gsn-form .gsn-tiptext{
+	display:block;
+	color:#999;
+	padding-top:8px;}
+	
+.gsn-formerr .gsn-inputext{
+	border-color:#b94a48;}
+.gsn-formerr .gsn-tiptext{
+	color:#b94a48;}
+	
+
+.gsn-form .gsn-textarea{
+	border:1px solid #bbb;
+	font-size:14px;
+	color:#aaa;
+	line-height:24px;}
+.gsn-form .gsn-textarea:focus{
+	color:#333;}
+	
+.gsn-formerr .gsn-textarea{
+	border-color:#b94a48;}	
+	
+
+.gsn-form .restipbox{
+	height:12px;
+	padding:10px 15px;
+	line-height:12px;
+	width:80%;
+	position:relative;
+	border-radius:5px;	
+	}
+.gsn-form .restipbox .close{
+	font-size:20px;
+	position:absolute;
+	_font-size:13px;
+	_font-weight:bold;
+	text-decoration:none;
+	right:10px;
+	_top:13px;
+	color:#999;
+}
+.gsn-form .restipbox .close:hover{
+	color:#cfcfcf;}
+.gsn-form .alertbox{
+	background:#fcf8e3;
+	border:1px solid #fbeed5;
+	color:#c09853}
+.gsn-form .attentionbox{
+	background:#d9edf7;
+	border:1px solid #bce8f1;
+	color:#3a87ad}
+.gsn-form .errorbox{
+	background:#f2dede;
+	border:1px solid #eed3d7;
+	color:#b94a48;}
+.gsn-form .successbox{
+	background:#dff0d8;
+	border:1px solid #d6e9c6;
+	color:#468847}
+
+.gsn-select{
+	width:156px;
+	height:27px;
+	border:1px solid #bbb;
+	position:relative;
+	z-index:1}
+.gsn-select .select-txt{
+	font-size:14px;
+	color:#aaa;
+	line-height:27px;
+	text-indent:8px;}
+.gsn-select .selectlist{
+	width:156px;
+	border:1px solid #bbb;
+	overflow:hidden;
+	position:absolute;
+	z-index:10;
+	margin-left:-1px;
+	padding:5px 0;
+	background:#fff;}
+.gsn-select .selectlist a{
+	width:136px;
+	display:block;
+	padding-left:20px;
+	color:#333;
+	height:27px;
+	line-height:27px;
+}
+.gsn-select .selectlist a:hover{
+	background:#41afea;
+	color:#fff;
+	text-decoration:none;}
+.gsn-select .arrow{  
+  display:block;  
+  height:0px;  
+  width:0px;  
+  position:absolute;  
+  font-size:0;  
+  line-height:0;  
+  top:12px;  
+  right:10px;
+  border-top:5px solid #999;  
+  border-bottom:0; 
+  border-right:5px solid #fff;  
+  border-left:5px solid #fff;  
+}  
+.gsn-select .select-txt-cur{
+	color:#333;}
+.gsn-select .arrow-cur
+{
+  border-top:5px solid #333;  
+  border-bottom:0; 
+  border-right:5px solid #fff;  
+  border-left:5px solid #fff;  
+
+  border-top:0\9;
+  border-bottom:5px solid #333\9;
+  border-right:5px solid #fff\9;  
+  border-left:5px solid #fff\9;
+  
+  transform:rotate(180deg);
+  transition:transform 250ms; 
+  -webkit-transform:rotate(180deg);
+  -webkit-transition:-webkit-transform 250ms;
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* report */
+#gsn_frame_report{width:500px; height:330px;}
+#gsn_frame_report ul{ padding: 0; margin: 10px 0;}
+#gsn_frame_report li input{ width: 20px; margin-right: 5px; }
+#gsn_frame_report li{ line-height: 2em; list-style:none; font-size: 14px; }
+#gsn_frame_report h3{ margin: 0; line-height: 2em; font-weight: normal; color: #06c;}
+#gsn_frame_report #report_submit{float: right; margin: -20px -2px 0 0; line-height: 18px;}
+#gsn_frame_report .gsn-textarea{width:100%; height: 90px;}
+#gsn_frame_report p{line-height: 2em; font-size: 14px;}
+
+/* old messages */
+.reback_mask .close_btn{
+	width:32px;
+	height:32px;
+	overflow:hidden;
+	display:inline-block;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	background:url(/common/img/icon.png) no-repeat -120px -347px;}
+.reback_mask .close_btn:hover{
+	background-position:-158px -347px;}

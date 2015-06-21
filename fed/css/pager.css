@@ -1,0 +1,76 @@
+div.pager {
+    margin-bottom: 10px;
+    margin-top: 10px;
+	width: 100%;
+}
+
+div.pager .nav{
+    float:right;
+}
+
+div.pager a {
+    color: #518fce;
+	float:left;
+    margin-right: 2px;
+	padding:0 10px;
+	height:27px;
+	border-radius:4px;
+	display:inline-block;
+	overflow:hidden;
+    text-decoration: none;
+	text-align:center;
+	line-height:27px;
+}
+div.pager a:hover{
+	 background:#E5F0FC;
+	 text-decoration:none;}
+div.pager a.current {
+    color: #fff;
+	background:#6AC0EB;
+}
+div.pager .dotdot{
+	float:left;
+	color: #518fce;
+	line-height:27px;
+	padding:0 10px;
+}
+div.pager a.prevdisabled,
+div.pager a.nextdisabled,
+div.pager a.prevpage,
+div.pager a.nextpage{
+	width:43px;
+	height:27px;
+	overflow:hidden;
+	cursor:pointer;
+	padding:0;
+	display:inline-block;
+    background:url(/common/img/normal-button.png) no-repeat;
+	}
+div.pager a.prevpage{
+	color: #518fce;
+	padding-left:18px;
+	text-align:left;
+	background-position:-583px -56px;}
+div.pager a.prevpage:hover{ background:url(/common/img/normal-button.png) no-repeat -338px -263px; color:#fff;}
+div.pager a.nextpage{ background:url(/common/img/normal-button.png) no-repeat -338px -207px;color:#518fce; padding-right:12px; width:49px;}
+div.pager a.nextpage:hover{ background:url(/common/img/normal-button.png) no-repeat -338px -235px;color:#fff;}
+div.pager a.prevdisabled {
+	padding-left:18px;
+	text-align:left;
+	cursor:default;
+	background-position:-583px 0;
+    color: #999;
+}
+div.pager a.nextdisabled {
+	background-position:-583px -28px;
+    color: #999;
+	 padding-right:12px; width:49px;
+	cursor:default;
+}
+div.pager a.prevdisabled:hover{	background-position:-583px 0; color:#999}
+div.pager a.nextdisabled:hover{ background-position:-583px -28px; color:#999}
+
+div.pager .pagetext{
+	color:#666;
+	float:left;
+	line-height:27px;}

@@ -1,0 +1,122 @@
+/* button size */
+
+/* 图片引用  */
+.tag-btn-normal,.tag-btn-selected{
+	height:30px;
+	padding:0 16px;
+	overflow:hidden;
+	display:inline-block;
+	overflow:hidden;
+	font-size:14px;
+	line-height:30px;
+	background:#e6e6e6;
+	color:#666;}
+.tag-btn-normal:hover{
+	background:#41afea;
+	color:#fff;}
+.tag-btn-selected{
+	cursor:default;
+	padding-left:30px;
+	background:#41afea url(/common/img/icon.png) no-repeat -253px -168px;
+	color:#fff;}
+/*tipslist*/
+.gsn-tips-list{
+	width:120px;
+	background:#efefef;
+	border-radius:5px;
+	position:relative;
+	padding:15px 0 5px 0;
+}
+.gsn-tips-list dl{
+	width:120px;
+	overflow:hidden;}
+.gsn-tips-list dt{
+	color:#999;
+	padding:0 12px;
+	padding-bottom:10px;}
+.gsn-tips-list dd{
+	width:96px;}
+.gsn-tips-list dd a{
+	width:96px;
+	height:22px;
+	line-height:22px;
+	float:left;
+	padding:0 12px;
+	color:#666;
+	display:inline-block;
+	}
+.gsn-tips-list dd a:hover{
+	background:#ddd}
+.gsn-tips-list dd.current a{
+	background:#41afea;
+	color:#fff;
+	cursor:default;}
+
+.gsn-tips-list .leftarrow{  
+  display:block;  
+  height:0px;  
+  width:0px;  
+  position:absolute;  
+  font-size:0;  
+  line-height:0;  
+  margin-left:-5px;
+  top:18px;
+  left:0;
+  border-top:5px solid #fff;  
+  border-bottom:5px solid #fff;  /* 注意颜色的变化 */  
+  border-right:5px solid #efefef;  
+  border-left:0;  
+}  
+
+/*次级菜单*/
+.gsn-tab{
+	width:100%;
+	overflow:hidden;
+	*position:relative;
+	*padding-bottom:5px;
+	border-bottom:1px solid #dedede;}
+.gsn-tab ul{
+	*position:relative;
+	*left:-2px;
+	margin-left:-2px;}
+
+.gsn-tab li{
+	line-height: 27px;
+	color: #dedede;
+	margin:5px 0;
+	height: 27px;
+	float:left;
+}
+.gsn-tab li a{
+	color: #005E8B;
+	height:27px;
+	display:inline-block;
+	margin:0 2px;
+	padding:0 10px; 
+}
+.gsn-tab li a:hover{
+	text-decoration:underline;}
+
+.gsn-tab li.current a{
+	background: #e4f0fc;
+	border-radius: 5px;
+}
+.gsn-tab li.current a:hover{
+	text-decoration:none;}
+.gsn-sec-nav{
+	width:100%;
+	border-bottom:1px solid #dedede;
+	overflow:hidden;}
+.gsn-sec-nav li{
+	padding-bottom:9px;
+	color:#dedede;
+	padding-right:12px;
+	float:left;}
+.gsn-sec-nav li a{
+	display:inline-block;
+	margin-right:12px;
+	_white-space:nowrap;}
+.gsn-sec-nav li a:hover{
+	text-decoration:underline;}
+
+
