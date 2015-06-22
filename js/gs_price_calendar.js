@@ -31,15 +31,17 @@
             minDate = options.minDate ? ((new Date(options.minDate.replace(/-/g,'/'))).getTime() < (new Date()).getTime() ? (new Date()).Format("yyyy-MM-dd") : options.minDate) : (new Date()).Format("yyyy-MM-dd"); //最小日期
 
         //me.config = $.extend(defaults, options);
-        console.log(options);
         me.config = {
+            container: options.container || 'body',
             selectedDate: options.selectedDate || (new Date).Format('yyyy-MM-dd'),
             minDate: minDate + ' 00:00:00', //不加上准确时间 取得的时间是从 08 时开始的
             priceData: options.priceData || null,
             showPrice: options.showPrice || true,
             description: options.description || '因票价变动频繁，请以实时查询报价为准。',
             listener: {
-                onInitData: options.onInitData || null  //初始化外部方法
+                onInitData: options.onInitData || null,  //初始化外部方法 TODO 方式可能需要改下
+                onChange: options.onChange || null,
+                onChangeMonth: options.onChangeMonth || null
             }
         };
 
@@ -53,7 +55,7 @@
         me.month = '';
         me.priceData = me.config.priceData;
 
-        me.init();
+        //me.init();
     };
 
     PriceCalendar.prototype = {
@@ -88,20 +90,21 @@
                         {{if i%7==0}}\
                             <tr>\
                         {{/if}}\
+                            <td data-id="${d.id}"\
                             {{if d.type == "none" }}\
-                                <td></td>\
+                                ></td>\
                             {{else d.type == "past"}}\
-                                <td class="past{{if d.weekend}} weekend {{/if}}">\
+                                 class="past{{if d.weekend}} weekend {{/if}}">\
                                     <span class="date{{if d.today}} today{{/if}}">${d.date}</span>\
                                     <span class="text">--</span>\
                                 </td>\
                             {{else d.type == "sellOut"}}\
-                                <td class="sell_out{{if d.weekend}} weekend {{/if}}">\
+                                 class="sell_out{{if d.weekend}} weekend {{/if}}">\
                                     <span class="date{{if d.today}} today{{/if}}">${d.date}</span>\
                                     <span class="text">无房</span>\
                                 </td>\
                             {{else d.type == "price"}}\
-                                <td class="item {{if d.lowestPrice}}lowest {{/if}}{{if d.weekend}} weekend{{/if}}">\
+                                 price="${d.price}" class="item {{if d.lowestPrice}}lowest {{/if}}{{if d.weekend}} weekend{{/if}}">\
                                     <span class="date{{if d.today}} today{{/if}}">${d.date}</span>\
                                     {{html d.price}}\
                                 </td>\
@@ -130,6 +133,11 @@
                 this.getLowestPrice(me.priceData);
             }
             me.setCalendar();
+            me.show();
+        },
+
+        show: function(){
+            this.$wrapper.show();
         },
 
         initWrapper: function(){
@@ -138,7 +146,7 @@
             me.$wrapper = $.tmpl(me.template.wrapper, {
                 description: me.config.description
             });
-            $(document.body).append(me.$wrapper);
+            $(me.config.container).append(me.$wrapper);
 
             //me.$caption = me.$wrapper.find('table caption');
             me.$control = me.$wrapper.find('.month_control');
@@ -146,8 +154,9 @@
             me.initLayoutEvent();
         },
 
+        // 设置当前要显示的年、月、日信息
         updateDate: function(dateStr){
-            console.log('dateStr---'+dateStr);
+            // console.log('dateStr---'+dateStr);
             this.year = (new Date(dateStr)).Format("yyyy");
             this.month = (new Date(dateStr)).Format("MM");
             this.date = (new Date(dateStr)).Format("dd");
@@ -174,6 +183,8 @@
                 }));
             //}
 
+            me.initCalendarEvent();
+
             var minDateArr = me.config.minDate.split('-');
 
             if(me.year == minDateArr[0] && me.month == minDateArr[1]){
@@ -196,7 +207,7 @@
 
         //格式化数据
         handleData: function(priceData){
-            console.log('me.month---'+this.month);
+            // console.log('me.month---'+this.month);
             var me = this,
                 cycleLen = 42,
                 firstDate = 1,
@@ -210,6 +221,7 @@
                 // console.log((new Date(me.config.minDate)).Format('yyyy-MM-dd hh:mm:ss'));
 
             var dataNull = {
+                id: '',
                 type: 'none',
                 none: true,
                 today: false,
@@ -298,6 +310,7 @@
             }));
         },
 */
+        // 当数据来源为异步时，通过ajax请求成功后调用该方法给日历添加价格数据
         setPriceData: function(priceData){
             var me = this;
             if(!me.priceData){
@@ -350,19 +363,56 @@
             this.lowestPrice = lowestPrice;
         },
 
+        // 外部操作事件
         initLayoutEvent: function(){
             var me = this;
-            this.$control.find('a').on('click', function(e){
+            this.$wrapper.on('click', function(event){
+                console.log('----');
+                event.stopPropagation();
+            });
+            this.$control.find('a').on('click', function(event){
+                console.log(111);
                 var $that = $(this),
                     control = $that.attr('data-bind');
                 if(!$that.hasClass('disable')){
                     me.changeMn(control);
                 }
-                e.stopPropagation();
+                console.log(222);
+                if (window.event) {
+                    event.cancelBubble = true; //IE
+                } else {
+                    event.stopPropagation(); // 其它浏览器下阻止冒泡
+                }
+                //event.stopPropagation();
                 return false;
             });
         },
 
+        initCalendarEvent: function(){
+            var me = this;
+            this.$calendar.find('td.item').on('click', function(){
+                var $that = $(this),
+                    id = $that.attr('data-id'),
+                    price = $that.find('price');
+
+                if(!$that.hasClass('current')){
+                    $that.siblings('.item').removeClass('current');
+                    $that.addClass('current');
+                    if(me.config.listener.onChange &&　typeof me.config.listener.onChange == 'function'){
+                        me.config.listener.onChange(id, price);
+                    }   
+                }
+            });
+
+            this.$calendar.find('td.item').on('mouseenter', function(){
+                console.log('mouseenter');
+            });
+            this.$calendar.find('td.item').on('mouseleave', function(){
+                console.log('mouseleave');
+            });
+        },  
+
+        // 切换日历时的数据处理
         handleChangeMn: function(control){
             var me = this;
 
@@ -390,8 +440,8 @@
                 me.date = minDay;
             }
             me.selectedDate = me.year + '-' + me.month + '-' + me.date;
-            console.log(me.year);
-            console.log(me.month);
+            /*console.log(me.year);
+            console.log(me.month);*/
         },
 
         changeMn: function(control){
@@ -424,12 +474,73 @@
             }*/
         }
 
-
-
     };
 
-    priceCalendar = new PriceCalendar({
-        priceData: {"2015-06-19":3025,"2015-06-20":561,"2015-06-21":408,"2015-06-22":547,"2015-06-23":315,"2015-06-24":447,"2015-06-25":495,"2015-06-26":576,"2015-06-27":495,"2015-06-28":433,"2015-06-29":391,"2015-06-30":495,"2015-07-01":466,"2015-07-02":490,"2015-07-03":597,"2015-07-04":315,"2015-07-05":379,"2015-07-06":257,"2015-07-07":326,"2015-07-08":344,"2015-07-09":425,"2015-07-10":480,"2015-07-11":238,"2015-07-12":409,"2015-07-13":258,"2015-07-14":344,"2015-07-15":344,"2015-07-16":409,"2015-07-17":579,"2015-07-18":302,"2015-07-19":299,"2015-07-20":238,"2015-07-21":309,"2015-07-22":370,"2015-07-23":344,"2015-07-24":344,"2015-07-25":249,"2015-07-26":229,"2015-07-27":199,"2015-07-28":209,"2015-07-29":269,"2015-07-30":269,"2015-07-31":289,"2015-08-01":239,"2015-08-02":299,"2015-08-03":239,"2015-08-04":240,"2015-08-05":299,"2015-08-06":299,"2015-08-07":319,"2015-08-08":364,"2015-08-09":344,"2015-08-10":269,"2015-08-11":269,"2015-08-12":389,"2015-08-13":344,"2015-08-14":344,"2015-08-15":315,"2015-08-16":344,"2015-08-17":344,"2015-08-18":344,"2015-08-19":279,"2015-08-20":250,"2015-08-21":299,"2015-08-22":269,"2015-08-23":249,"2015-08-24":199,"2015-08-25":226,"2015-08-26":276,"2015-08-27":276,"2015-08-28":299,"2015-08-29":286,"2015-08-30":276,"2015-08-31":267,"2015-09-01":281,"2015-09-02":490,"2015-09-03":430,"2015-09-04":344,"2015-09-05":315,"2015-09-06":344,"2015-09-07":485,"2015-09-08":344,"2015-09-09":370,"2015-09-10":370,"2015-09-11":528,"2015-09-12":315,"2015-09-13":344,"2015-09-14":485,"2015-09-15":370,"2015-09-16":370,"2015-09-17":0,"2015-09-18":0}
+    /*priceCalendar = new PriceCalendar({
+        priceData: {"2015-06-19":3025,"2015-06-20":561,"2015-06-21":408,"2015-06-22":-1,"2015-06-23":315,"2015-06-24":447,"2015-06-25":495,"2015-06-26":576,"2015-06-27":495,"2015-06-28":433,"2015-06-29":391,"2015-06-30":495,"2015-07-01":466,"2015-07-02":490,"2015-07-03":597,"2015-07-04":315,"2015-07-05":379,"2015-07-06":257,"2015-07-07":326,"2015-07-08":344,"2015-07-09":425,"2015-07-10":480,"2015-07-11":238,"2015-07-12":409,"2015-07-13":258,"2015-07-14":344,"2015-07-15":344,"2015-07-16":409,"2015-07-17":579,"2015-07-18":302,"2015-07-19":299,"2015-07-20":238,"2015-07-21":309,"2015-07-22":370,"2015-07-23":344,"2015-07-24":344,"2015-07-25":249,"2015-07-26":229,"2015-07-27":199,"2015-07-28":209,"2015-07-29":269,"2015-07-30":269,"2015-07-31":289,"2015-08-01":239,"2015-08-02":299,"2015-08-03":239,"2015-08-04":240,"2015-08-05":299,"2015-08-06":299,"2015-08-07":319,"2015-08-08":364,"2015-08-09":344,"2015-08-10":269,"2015-08-11":269,"2015-08-12":389,"2015-08-13":344,"2015-08-14":344,"2015-08-15":315,"2015-08-16":344,"2015-08-17":344,"2015-08-18":344,"2015-08-19":279,"2015-08-20":250,"2015-08-21":299,"2015-08-22":269,"2015-08-23":249,"2015-08-24":199,"2015-08-25":226,"2015-08-26":276,"2015-08-27":276,"2015-08-28":299,"2015-08-29":286,"2015-08-30":276,"2015-08-31":267,"2015-09-01":281,"2015-09-02":490,"2015-09-03":430,"2015-09-04":344,"2015-09-05":315,"2015-09-06":344,"2015-09-07":485,"2015-09-08":344,"2015-09-09":370,"2015-09-10":370,"2015-09-11":528,"2015-09-12":315,"2015-09-13":344,"2015-09-14":485,"2015-09-15":370,"2015-09-16":370,"2015-09-17":0,"2015-09-18":0}
+        
+        // listener: {
+        //     onInitData: function(callback){
+        //         $.getJSON("calendar_mock.php", function(data){
+        //             priceCalendar.setPriceData(data.Prices);
+        //         });
+        //     }
+        // }
+    });*/
+
+    /**
+     *  针对弹出浮层类型的日历控制
+     */
+    var FloatPriceCalendar = function(element, options){
+        var me = this,
+            $element = $(element);
+
+        me.config = {
+            listener: {
+                onFocus: options.onFocus || null,
+                onBlur: options.onBlur || null
+            }
+        };
+
+        $.extend(me, new PriceCalendar(options));
+
+        me.isShow = false;
+
+        $element.on('focus', function(){
+            if(!me.isShow){
+                me.init();
+                me.config.listener.onFocus && me.config.listener.onFocus(me);
+            }
+        });
+
+        $element.on('blur', function(){
+            console.log('blur');
+            me.hide();
+            me.config.listener.onBlur && me.config.listener.onBlur(me);
+
+        });
+    };
+
+    FloatPriceCalendar.prototype = $.extend(PriceCalendar.prototype, {
+        show: function(){
+            this.isShow = true;
+            this.$wrapper.show();
+        },
+
+        hide: function(){
+            this.isShow = false;
+            this.$wrapper.hide();
+        },
+
+        setOffset: function(){
+
+        } 
+
+    });
+
+    floatPriceCalendar = new FloatPriceCalendar('#start', {
+        priceData: {"2015-06-19":3025,"2015-06-20":561,"2015-06-21":408,"2015-06-22":-1,"2015-06-23":315,"2015-06-24":447,"2015-06-25":495,"2015-06-26":576,"2015-06-27":495,"2015-06-28":433,"2015-06-29":391,"2015-06-30":495,"2015-07-01":466,"2015-07-02":490,"2015-07-03":597,"2015-07-04":315,"2015-07-05":379,"2015-07-06":257,"2015-07-07":326,"2015-07-08":344,"2015-07-09":425,"2015-07-10":480,"2015-07-11":238,"2015-07-12":409,"2015-07-13":258,"2015-07-14":344,"2015-07-15":344,"2015-07-16":409,"2015-07-17":579,"2015-07-18":302,"2015-07-19":299,"2015-07-20":238,"2015-07-21":309,"2015-07-22":370,"2015-07-23":344,"2015-07-24":344,"2015-07-25":249,"2015-07-26":229,"2015-07-27":199,"2015-07-28":209,"2015-07-29":269,"2015-07-30":269,"2015-07-31":289,"2015-08-01":239,"2015-08-02":299,"2015-08-03":239,"2015-08-04":240,"2015-08-05":299,"2015-08-06":299,"2015-08-07":319,"2015-08-08":364,"2015-08-09":344,"2015-08-10":269,"2015-08-11":269,"2015-08-12":389,"2015-08-13":344,"2015-08-14":344,"2015-08-15":315,"2015-08-16":344,"2015-08-17":344,"2015-08-18":344,"2015-08-19":279,"2015-08-20":250,"2015-08-21":299,"2015-08-22":269,"2015-08-23":249,"2015-08-24":199,"2015-08-25":226,"2015-08-26":276,"2015-08-27":276,"2015-08-28":299,"2015-08-29":286,"2015-08-30":276,"2015-08-31":267,"2015-09-01":281,"2015-09-02":490,"2015-09-03":430,"2015-09-04":344,"2015-09-05":315,"2015-09-06":344,"2015-09-07":485,"2015-09-08":344,"2015-09-09":370,"2015-09-10":370,"2015-09-11":528,"2015-09-12":315,"2015-09-13":344,"2015-09-14":485,"2015-09-15":370,"2015-09-16":370,"2015-09-17":0,"2015-09-18":0}
+        
         // listener: {
         //     onInitData: function(callback){
         //         $.getJSON("calendar_mock.php", function(data){
@@ -438,5 +549,10 @@
         //     }
         // }
     });
+    console.log(FloatPriceCalendar.prototype);
+
+    console.log(floatPriceCalendar);
+
+    console.log(floatPriceCalendar.show);
 
 })(jQuery)

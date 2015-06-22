@@ -6,10 +6,9 @@
     padding-top: 10px;
     font-family: Microsoft YaHei,Hiragino Sans GB;
     width: 480px;
-    position: absolute;
-    top: 50px;
-    left: 50px;
+    position: relative;
     overflow: hidden;
+    display: none;
 }
 .price_calendar .price_calendar_box{
     position: relative;
@@ -71,6 +70,12 @@
 .price_calendar td.sell_out .text,
 .price_calendar td.sell_out .date{
     color: #ccc;
+}
+.price_calendar td.sell_out.current{
+    background-color: #FF5200;
+}
+.price_calendar td.sell_out.current span{
+    color: #fff;
 }
 .price_calendar .item{
     cursor: pointer;
